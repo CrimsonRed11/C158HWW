@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtual iPad Store</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    <script src="Poster.js"></script>
+    <script src="Circle.js"></script>
+    
+  </head>
+  <body>
+    <a-scene background="color:#90caf9">
+      
+      <a-plane
+        id="ground"
+        color="#78909c"
+        width="200"
+        height="100"
+        rotation="-90 0 0"
+      ></a-plane>
+      
+      <a-entity id="posters-container"  > </a-entity>
+
+      <a-camera id="camera" wasd-controls="enabled:false;" position="0 12 20">
+        <a-entity
+          id="camera-cursor"
+          cursor
+          position="0 0 -2"
+          geometry="primitive: ring; radiusInner: 0.08; radiusOuter: 0.12"
+          material="color: orange; shader: flat"
+        >
+        </a-entity>
+        <a-entity
+          id="app-title"
+          position="0 0.75 -1"
+          text="font: exo2bold; align: center; width: 2; color: #000; value: Virtual iPad Store!"
+        >
+         <a-entity
+            id="app-subtitle"
+            position="0 -0.10 0"
+            text="font: dejavu; align: center; width: 1; color: #000; value: Look at the latest iPads!"
+          ></a-entity>
+        </a-entity>        
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
